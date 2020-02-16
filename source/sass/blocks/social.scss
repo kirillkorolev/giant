@@ -1,0 +1,55 @@
+.social {
+  @include reset-list;
+  //margin: 0 auto;
+  display: flex;
+  width: 8%;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 165px;
+}
+
+.social__item {
+  &--games {
+    .social__icon {
+      color: $pink;
+    }
+  }
+}
+
+
+.social__icon {
+  color: $white;
+}
+
+.social__link {
+  display: block;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  color: $grey;
+}
+
+.social__link:active {
+  opacity: 0.7;
+}
+
+@media (max-width: $mobile-width) {
+  .social {
+    margin-bottom: 0;
+    align-items: center;
+    width: auto;
+    justify-content: flex-start;
+    min-width: auto;
+    margin-right: 10px;
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .social__item {
+    margin-bottom: 5px;
+  }
+}

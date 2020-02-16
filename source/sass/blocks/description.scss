@@ -1,0 +1,109 @@
+.description__wrapper {
+  width: 556px;
+}
+
+.description__title {
+  font-family: "Dosis", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  color: $black;
+  margin: 0 0 23px;
+}
+
+.description__text {
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.description__text:nth-of-type(1) {
+  margin-bottom: 69px;
+}
+
+.description__text:nth-of-type(2) {
+  margin-bottom: 28px;
+}
+
+.description__list {
+  @include reset-list;
+}
+
+.description__item {
+  padding-left: 35px;
+  position: relative;
+}
+
+.description__item::before,
+.description__item::after {
+  content: "";
+  position: absolute;
+}
+
+.description__item::before {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $black;
+  left: 0;
+  top: 4px;
+}
+
+.description__item::after {
+  width: 12px;
+  height: 9px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icons/icon-check-white.svg");
+  left: 2px;
+  top: 6px;
+  //z-index: 6;
+  background-size: 12px 9px;
+}
+
+.description__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.description {
+  width: 100%;
+  background-repeat: no-repeat;
+
+  background-image: url("../img/backgrounds/bg-shadow@1x.png");
+  background-position: left 0 bottom 0;
+  background-size: 100% 186px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backgrounds/bg-shadow@2x.png");
+  }
+}
+
+.description__container {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 170px 10px 169px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid $border-grey;
+
+  background-repeat: no-repeat;
+  background-image: url("../../img/backgrounds/bg-description-iphone-desktop@1x.png");
+  background-size: 31%;
+  background-position: left 10px bottom 120px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backgrounds/bg-description-iphone-desktop@2x.png");
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .description__container {
+    padding: 60px 10px 450px;
+    background-size: 280px auto;
+    background-position: left 50% bottom 40px;
+    justify-content: center;
+  }
+
+  .description {
+    background-image: none;
+  }
+}
